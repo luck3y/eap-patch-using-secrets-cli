@@ -18,7 +18,7 @@ Basic instuctions:
   
   (Alternatively, this may be provided to oc new-app with -e CUSTOM_INSTALL_DIRECTORIES, but easy to forget :) )
 
-- The application template or existing deployment config may now be modified to mount the secret containing the patch and the application rebuilt, see: https://github.com/luck3y/hello-world-war/blob/patching/eap71-basic-s2i-patching.json#L344 and https://github.com/luck3y/hello-world-war/blob/patching/eap71-basic-s2i-patching.json#L433 for the required mount configuration. 
+- The application template or existing deployment config may now be modified to mount the secret containing the patch and the application rebuilt, see: https://github.com/travisrogers05/eap-patch-using-secrets-cli/blob/master/eap71-basic-s2i-patching.json#L344-#L350 and https://github.com/travisrogers05/eap-patch-using-secrets-cli/blob/master/eap71-basic-s2i-patching.json#L432#L437 for the required mount configuration. 
 
 - The volume name should match the secret created in the initial Secret creation (jbeap-16108.zip, in this example.) 
 
