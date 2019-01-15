@@ -240,6 +240,14 @@
                         "uri": "${SOURCE_REPOSITORY_URL}",
                         "ref": "${SOURCE_REPOSITORY_REF}"
                     },
+                    "secrets": [
+                        {
+                            "destinationDir": "/tmp/patches",
+                            "secret": {
+                            "name": "jbeap-16108"
+                            }
+                        }
+                    ],
                     "contextDir": "${CONTEXT_DIR}"
                 },
                 "strategy": {
@@ -341,14 +349,6 @@
                     },
                     "spec": {
                         "terminationGracePeriodSeconds": 75,
-                        "volumes": [
-                            {
-                                "name": "jbeap-16108-volume",
-                                "secret": {
-                                    "secretName": "jbeap-16108"
-                                }
-                            }
-                        ],
                         "containers": [
                             {
                                 "name": "${APPLICATION_NAME}",
@@ -427,12 +427,6 @@
                                     {
                                         "name": "AUTO_DEPLOY_EXPLODED",
                                         "value": "${AUTO_DEPLOY_EXPLODED}"
-                                    }
-                                ],
-                                "volumeMounts": [
-                                    {
-                                        "mountPath": "/opt/patches",
-                                        "name": "jbeap-16108-volume"
                                     }
                                 ]
                             }

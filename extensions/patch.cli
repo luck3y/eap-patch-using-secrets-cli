@@ -1,3 +1,0 @@
-embed-server --std-out=echo  --server-config=standalone-openshift.xml
-patch apply /opt/patches/jbeap-16108.zip
-quit
